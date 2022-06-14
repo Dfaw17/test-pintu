@@ -1,0 +1,11 @@
+requests
+assertpy
+pytest
+pytest-cov
+pytest-html-reporter
+pytest-email
+Appium-Python-Client
+selenium
+Faker
+pytest-testdox
+pytest_steps
