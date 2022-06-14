@@ -9,7 +9,7 @@ class TestAutomationPintuApiGet:
 
     def test_get_api(self):
         get_data = requests.get(L.url_api)
-        print("haii")
+
         validate_userId = get_data.json()[1].get("userId")
         validate_Id = get_data.json()[1].get("id")
         validate_title = get_data.json()[1].get("title")
