@@ -21,16 +21,21 @@ jobs:
         run: |
           pytest -m api
 
-      - uses: actions/upload-artifact@v3
+      - name: Upload Artifact
+        if: always()
+        uses: actions/upload-artifact@v3
         with:
           name: report
           path: report/report.html
 
-      - uses: actions/download-artifact@v3
+      - name: Download Artifact
+        if: always()
+        uses: actions/download-artifact@v3
         with:
           name: report
 
       - name: Slack Notification
+        if: always()
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: report-automation
