@@ -16,7 +16,7 @@ class TestAutomationPintuApiGet:
         validate_body = get_data.json()[1].get("body")
         validate_response_code = get_data.status_code
 
-        assert_that(validate_response_code).is_equal_to(2000)
+        assert_that(validate_response_code).is_equal_to(2001)
         assert_that(validate_userId).is_type_of(int)
         assert_that(validate_Id).is_type_of(int)
         assert_that(validate_title).is_type_of(str)
