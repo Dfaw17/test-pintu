@@ -46,6 +46,14 @@ jobs:
           SLACK_USERNAME: Bot Automation Fawwaz
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
+      - name: notify-tests
+        uses: ivanklee86/xunit-slack-reporter@v1.4.0
+        env:
+          EXIT_CODE_FROM_REPORT: "True"
+          SLACK_CHANNEL: report-automation
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN_BOT_JUNITXML }}
+          XUNIT_PATH: report/report.xml
+
 #      - name: Upload to slack step
 #        uses: adrey/slack-file-upload-action@master
 #        with:
