@@ -25,7 +25,7 @@ class TestAutomationPintuApiPost:
         validate_body = post_data.json().get("body")
         validate_userId = int(post_data.json().get("userId"))
 
-        assert_that(post_data.status_code).is_equal_to(2010)
+        assert_that(post_data.status_code).is_equal_to(201)
         assert_that(validate_title).is_equal_to(title)
         assert_that(validate_body).is_equal_to(body)
         assert_that(validate_userId).is_equal_to(userId)

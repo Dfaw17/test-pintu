@@ -45,3 +45,10 @@ jobs:
           SLACK_TITLE: Message
           SLACK_USERNAME: Bot Automation Fawwaz
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+      - name: Upload to slack step
+        uses: adrey/slack-file-upload-action@master
+        with:
+          token: ${{ secrets.SLACK_TOKEN_UPLOAD_ARTIFACT }}
+          path: test.txt
+          channel: random
