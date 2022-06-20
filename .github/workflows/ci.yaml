@@ -20,9 +20,7 @@ jobs:
       - name: Run test with pytest
         run: |
           pytest -m api
-  generate-artifact:
-    runs-on: ubuntu-latest
-    steps:
+
       - uses: actions/upload-artifact@v3
         with:
           name: report
@@ -42,3 +40,10 @@ jobs:
           SLACK_TITLE: Message
           SLACK_USERNAME: Bot Automation Fawwaz
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+      - name: Upload to slack step
+        uses: adrey/slack-file-upload-action@master
+        with:
+          token: ${{ secrets.SLACK_WEBHOOK }}
+          path: report/report.html
+          channel: report-automation
