@@ -39,4 +39,4 @@ jobs:
           SLACK_MESSAGE: 'this test make by loves'
           SLACK_TITLE: Api Automation
           SLACK_USERNAME: Bot Automation Fawwaz
-          SLACK_WEBHOOK: https://hooks.slack.com/services/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
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
