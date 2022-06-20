@@ -20,7 +20,9 @@ jobs:
       - name: Run test with pytest
         run: |
           pytest -m api
-
+  generate-artifact:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/upload-artifact@v3
         with:
           name: report
