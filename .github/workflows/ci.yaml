@@ -30,5 +30,13 @@ jobs:
         with:
           name: report
 
-      - name: Display structure of downloaded files
-        run: ls -R
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: report-automation
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          SLACK_MESSAGE: 'this test make by loves'
+          SLACK_TITLE: Api Automation
+          SLACK_USERNAME: Bot Automation Fawwaz
+          SLACK_WEBHOOK: https://hooks.slack.com/services/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
