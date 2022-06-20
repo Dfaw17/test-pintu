@@ -50,5 +50,5 @@ jobs:
         uses: adrey/slack-file-upload-action@master
         with:
           token: ${{ secrets.SLACK_TOKEN_UPLOAD_ARTIFACT }}
-          path: test.txt
-          channel: random
+          path: report/report.html
+          channel: report-automation
