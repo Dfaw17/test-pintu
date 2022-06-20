@@ -35,8 +35,8 @@ jobs:
         env:
           SLACK_CHANNEL: report-automation
           SLACK_COLOR: ${{ job.status }}
-          SLACK_ICON: https://github.com/rtCamp.png?size=48
-          SLACK_MESSAGE: 'this test make by loves'
-          SLACK_TITLE: Api Automation
+          SLACK_ICON: https://www.pngitem.com/pimgs/m/31-312064_programming-icon-png-python-logo-512-transparent-png.png
+          SLACK_MESSAGE: 'notification report automation'
+          SLACK_TITLE: Message
           SLACK_USERNAME: Bot Automation Fawwaz
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
