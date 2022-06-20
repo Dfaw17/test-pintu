@@ -22,3 +22,5 @@ class TestAutomationPintuApiGet:
         assert_that(validate_title).is_type_of(str)
         assert_that(validate_body).is_type_of(str)
         assert_that([validate_userId, validate_Id, validate_body, validate_title]).is_not_none()
+
+        print("triggred")
