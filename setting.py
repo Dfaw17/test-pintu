@@ -12,6 +12,7 @@ class Locator(object):
     DeviceAppium = {
         "appium:udid": "emulator-5554",
         "platformName": "Android",
+        "app": "C:/Users/dfaww/PycharmProjects/test-automation/apk/test.apk",
         "appium:appPackage": "com.loginmodule.learning",
         "appium:appActivity": "com.loginmodule.learning.activities.LoginActivity"
     }

@@ -13,7 +13,7 @@ class TestRegister(unittest.TestCase):
 
     def tearDown(self):
         time.sleep(2)
-        self.driver.quit()
+        self.driver.remove_app("com.loginmodule.learning")
 
     def test_register_normal(self):
         L.ScrollByID(self, L.RegisterPage.LinkRegister)

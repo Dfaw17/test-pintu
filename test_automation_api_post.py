@@ -18,20 +18,17 @@ class TestAutomationPintuApiPost:
             "body": body,
             "userId": int(userId)
         }
-        print("Prepare Data")
 
         post_data = requests.post(L.url_api, data=data)
-        print("Hit API")
 
         validate_title = post_data.json().get("title")
         validate_body = post_data.json().get("body")
         validate_userId = int(post_data.json().get("userId"))
-        print("Prepare Validation")
 
+        assert_that(post_data.status_code).is_equal_to(201)
         assert_that(validate_title).is_equal_to(title)
         assert_that(validate_body).is_equal_to(body)
         assert_that(validate_userId).is_equal_to(userId)
-        print("Action Assert")
 
     def test_post_api_data_null(self):
         title = ""
